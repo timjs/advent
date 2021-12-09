@@ -1,8 +1,11 @@
 import gleam/io
+import gleam/int
 import gleam/erlang
+import day7.{run}
 
 pub fn main() {
-  try in = erlang.get_line("")
-  io.print(in)
+  try input = erlang.get_line("")
+  run(input)
+  |> io.debug()
   Ok(Nil)
 }
