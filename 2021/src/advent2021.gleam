@@ -1,5 +1,8 @@
 import gleam/io
+import gleam/erlang
 
 pub fn main() {
-  io.println("Hello from advent2021!")
+  try in = erlang.get_line("")
+  io.print(in)
+  Ok(Nil)
 }
